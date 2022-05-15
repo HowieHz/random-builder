@@ -1,4 +1,6 @@
 # do_random
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/do_random)
+
 random and random
 
 >pip install do_random
