@@ -62,7 +62,6 @@ def _get_seed() -> int:
     """
     return int(time.time() + random.randint(0, 100_000_000))
 
-
 if __name__ == "__main__":
     inp_string = input(":")
     for _ in range(10):

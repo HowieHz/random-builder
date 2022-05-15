@@ -1,7 +1,7 @@
 # random-builder
 random and random
 
->pip install random-builder
+>pip install random_builder
 
 ## 包一览
 random_string 字符串随机处理

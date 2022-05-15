@@ -1,11 +1,11 @@
 from setuptools import find_packages, setup
 
-with open(r"..\README.md", "r", encoding="utf-8") as fh:
+with open(r"README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="random-builder",
-    version="0.0.1",
+    name="random_builder",
+    version="0.0.2",
     description="random and random",
     packages=find_packages(),
     include_package_data=True,
