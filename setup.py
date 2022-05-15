@@ -5,7 +5,7 @@ with open(r"README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="do_random",
-    version="0.0.2",
+    version="0.0.3",
     description="random and random",
     packages=find_packages(),
     include_package_data=True,
