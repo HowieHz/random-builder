@@ -27,8 +27,7 @@ def shuffle(string: str, times: int = 1, show_seed: bool = False) -> Union[str, 
             string_list[index] = tmp
     if show_seed:
         return ''.join(string_list), seed
-    else:
-        return ''.join(string_list)
+    return ''.join(string_list)
 
 
 def drop(string: str, how_many: Union[int, float], show_seed: bool = False) -> Union[str, tuple]:
@@ -54,8 +53,7 @@ def drop(string: str, how_many: Union[int, float], show_seed: bool = False) -> U
         string_list.remove(string_list[(how_many * seed) % len(string_list)])
     if show_seed:
         return ''.join(string_list), seed
-    else:
-        return ''.join(string_list)
+    return ''.join(string_list)
 
 
 def _get_seed() -> int:
