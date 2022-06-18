@@ -1,3 +1,4 @@
+"""对字符串进行操作的包"""
 import random
 import time
 from typing import Union
