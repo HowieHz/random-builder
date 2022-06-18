@@ -1,5 +1,9 @@
 # do_random
+
+![PyPI - License](https://img.shields.io/pypi/l/do_random)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/do_random)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/do_random)
+![GitHub repo size](https://img.shields.io/github/repo-size/HowieHz/do_random)
 
 random and random
 
@@ -8,6 +12,7 @@ random and random
 一个包用于随机的处理数据
 
 ## 包一览
+
 string 字符串随机处理
 
     shuffle 打乱字符串
