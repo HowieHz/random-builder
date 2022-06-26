@@ -6,7 +6,9 @@ from typing import Union
 __all__ = "shuffle,drop".split(",")
 
 
-def shuffle(string: str, times: int = 1, show_seed: bool = False) -> Union[str, tuple]:
+def shuffle(
+    string: str, times: int = 1, show_seed: bool = False
+) -> Union[str, tuple[str, int]]:
     """
     打乱字符串
 
@@ -33,7 +35,7 @@ def shuffle(string: str, times: int = 1, show_seed: bool = False) -> Union[str, 
 
 def drop(
     string: str, how_many: Union[int, float], show_seed: bool = False
-) -> Union[str, tuple]:
+) -> Union[str, tuple[str, int]]:
     """
     随机丢去字符串一些字符
 
@@ -47,11 +49,13 @@ def drop(
     if int(how_many) >= len(string):
         return ""
     seed = _get_seed()
-    string_list = list(string)
+    string_list: list[str] = list(string)
     if how_many < 1:
         how_many = int(len(string_list) * how_many)
         if how_many == 0:
             return "".join(string_list)
+
+    how_many = int(how_many)
     for _ in range(how_many):
         string_list.remove(string_list[(how_many * seed) % len(string_list)])
     if show_seed:
@@ -69,6 +73,6 @@ def _get_seed() -> int:
 
 
 if __name__ == "__main__":
-    inp_string = input(":")
+    inp_string: str = input(":")
     for _ in range(10):
-        print(shuffle(drop(inp_string, how_many=2)))
+        print(shuffle(drop(inp_string, how_many=2, show_seed=True)[0]))
