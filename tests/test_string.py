@@ -19,6 +19,7 @@ def test_shuffle():
         all(i in string.shuffle(test_text) for i in tuple(test_text)) is True
     )  # 检测打乱了之后字母一致
     assert len(string.shuffle(test_text)) == len(test_text)  # 检测打乱了之后长度一致
+    assert string.shuffle() == ""
 
     assert isinstance(string.shuffle(test_text, show_seed=True)[1], int)  # 展示种子
 
@@ -31,6 +32,7 @@ def test_drop():
     """
     assert len(string.drop(test_text, how_many=0.5)) == ((len(test_text)) * 0.5)  # 去除一半
     assert len(string.drop(test_text, how_many=2)) == (len(test_text) - 2)  # 去除两个
+    assert string.drop(test_text, how_many=999999999) == ""  # 去除两个
 
     assert isinstance(
         string.drop(test_text, how_many=0.5, show_seed=True)[1], int
