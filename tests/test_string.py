@@ -3,7 +3,7 @@ import random
 from . import string
 
 # 测试数据
-test_text = str(random.randint(10000, 20000))
+test_text = str(random.randint(100000, 200000))
 test_value = random.randint(0, 9999)
 test_value2 = True
 test_value3 = test_text
