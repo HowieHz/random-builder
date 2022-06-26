@@ -72,7 +72,7 @@ def _get_seed() -> int:
     return int(time.time() + random.randint(0, 100_000_000))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     inp_string: str = input(":")
     for _ in range(10):
         print(shuffle(drop(inp_string, how_many=2, show_seed=True)[0]))
