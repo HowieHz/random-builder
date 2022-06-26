@@ -35,3 +35,12 @@ def test_drop():
     assert isinstance(
         string.drop(test_text, how_many=0.5, show_seed=True)[1], int
     )  # 展示种子
+
+
+def test__get_seed() -> None:
+    """
+    测试_get_seed
+
+    :return: None
+    """
+    assert isinstance(string._get_seed(), int)
