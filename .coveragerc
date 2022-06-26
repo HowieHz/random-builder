@@ -1,0 +1,9 @@
+[run]
+cover_pylib = True
+source = do_random
+omit =
+    setup.py
+
+[report]
+exclude_lines =
+    if __name__ == "__main__":
